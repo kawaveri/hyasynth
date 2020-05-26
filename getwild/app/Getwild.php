@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class Getwild extends Model
 {
@@ -25,5 +26,19 @@ class Getwild extends Model
             ->where('foo', $foo)
             ->where('bar', $bar)
             ->isNotEmpty();
+    }
+
+    /**
+     * ひとりでは解けない愛のパズルを返します。
+     *
+     * @return Collection ひとりでは解けない愛のパズル
+     */
+    public function getPuzzleAttribute(): Collection
+    {
+        return collect([
+            'solve_required' => 2, // 愛のパズルを解くのに必要な人数
+            'type' => 'love', // パズルの種類
+            'is_hold' => true, // 抱いているか
+        ]);
     }
 }

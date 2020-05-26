@@ -8,14 +8,16 @@ use Tests\TestCase;
 class getwildTest extends TestCase
 {
     /**
-     * wild&toughがget出来るかテストします。
+     * get wild&toughが正しいかテストします。
      *
      * @return void
      */
     public function testGetWildAndTough()
     {
-        $response = $this->get('/');
+        // Getwildインスタンスを生成
+        $getwild = new Getwild();
 
-        $response->assertStatus(200);
+        // wild&toughがget出来るかテスト
+        $this->assertTrue($getwild->get('wild', 'tough'));
     }
 }

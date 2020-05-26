@@ -23,5 +23,10 @@ class getwildTest extends TestCase
         // wild|toughではget出来ない
         $this->assertFalse($getwild->get('wild', null));
         $this->assertFalse($getwild->get(null, 'tough'));
+        // chance&luckもget出来る
+        $this->assertTrue($getwild->get('chance', 'luck'));
+        // wild&toughまたはchance&luckの組み合わせでないとget出来ない
+        $this->assertFalse($getwild->get('wild', 'luck'));
+        $this->assertFalse($getwild->get('chance', 'tough'));
     }
 }

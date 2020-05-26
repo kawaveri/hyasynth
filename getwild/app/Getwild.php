@@ -16,6 +16,6 @@ class Getwild extends Model
      */
     public function get(?string $word1, ?string $word2): bool
     {
-        return $word1 === 'wild' && $word2 === 'tough';
+        return ($word1 === 'wild' && $word2 === 'tough') || ($word1 === 'chance' && $word2 === 'luck');
     }
 }

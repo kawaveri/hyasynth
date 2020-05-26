@@ -10,7 +10,7 @@ use App\Getwild;
 class getwildTest extends TestCase
 {
     /**
-     * wildとtoughがget出来るかテストします。
+     * wild&toughがget出来るかテストします。
      *
      * @return void
      */
@@ -22,6 +22,24 @@ class getwildTest extends TestCase
         $expected = ['wild', 'tough'];
         // 実行結果
         $actual = $getter->getWildAndTough();
+
+        // 型も含めて等しいかテスト
+        $this->assertSame($expected, $actual);
+    }
+
+    /**
+     * chance&luckがget出来るかテストします。
+     *
+     * @return void
+     */
+    public function testGetChanceAndLuck()
+    {
+        // Getwildインスタンスを生成
+        $getter = new Getwild();
+        // 期待値
+        $expected = ['chance', 'luck'];
+        // 実行結果
+        $actual = $getter->getChanceAndLuck();
 
         // 型も含めて等しいかテスト
         $this->assertSame($expected, $actual);

@@ -5,14 +5,14 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class getwildTest extends TestCase
 {
     /**
-     * A basic test example.
+     * wild&toughがget出来るかテストします。
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testGetWildAndTough()
     {
         $response = $this->get('/');
 

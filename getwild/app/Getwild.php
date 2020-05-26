@@ -14,7 +14,7 @@ class Getwild extends Model
      * @param string $word2 文字列２
      * @return bool 判定結果
      */
-    public function get(string $word1, string $word2)
+    public function get(?string $word1, ?string $word2): bool
     {
         return $word1 === 'wild' && $word2 === 'tough';
     }

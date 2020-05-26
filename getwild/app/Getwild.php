@@ -16,4 +16,14 @@ class Getwild extends Model
     {
         return ['wild', 'tough'];
     }
+
+    /**
+     * chance&luckを返します。
+     *
+     * @return array chance&luck
+     */
+    public function getChanceAndLuck()
+    {
+        return ['chance', 'luck'];
+    }
 }

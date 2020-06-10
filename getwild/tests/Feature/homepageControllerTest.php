@@ -19,6 +19,12 @@ class homepageControllerTest extends TestCase
         //
         $response = $this->get('/homepages')
             ->assertStatus(200)
-            ->assertSee('ホームページ');
+            ->assertSeeText('カワヴェリのほめぱげ')
+            ->assertSeeText('カワヴェリのほぅむぺぇぢにようこそ！')
+            ->assertSee('★ぷろふぃーる')
+            ->assertSee('★日記')
+            ->assertSee('★RINK')
+            ->assertSee('★掲示板')
+            ->assertSeeText('キリ番GETした人は必ずコメントしてください。');
     }
 }
